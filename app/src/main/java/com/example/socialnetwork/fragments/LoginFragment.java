@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.util.Log;
 
 import com.example.socialnetwork.R;
 
@@ -21,7 +22,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         EditText usernameEditText = view.findViewById(R.id.userName);
@@ -34,9 +35,9 @@ public class LoginFragment extends Fragment {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                // In thông tin ra console
-                System.out.println("Username: " + username);
-                System.out.println("Password: " + password);
+
+                Log.d("LoginFragment", "Username: " + username);
+                Log.d("LoginFragment", "Password: " + password);
             }
         });
 
